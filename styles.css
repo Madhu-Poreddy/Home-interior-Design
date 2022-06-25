@@ -1,0 +1,121 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+
+}
+.banner{
+    width: 100%;
+    height:100vh;
+    background-size: cover;
+    background-position: center;
+    background-image:  linear-gradient(rgba(0,0,0, 0.75),
+    rgba(0,0,0, 0.75)), url("https://news.airbnb.com/wp-content/uploads/sites/4/2021/11/Home-Alone-Airbnb-01-Exterior-Credit-Sarah-Crowley.jpg?fit=2500%2C1667");
+}
+.banner-kitchen{
+    background-image:  linear-gradient(rgba(0,0,0, 0.75),
+    rgba(0,0,0, 0.75)), url("https://media.architecturaldigest.com/photos/60a6a478ced6797772f44d7a/3:2/w_1599,h_1066,c_limit/20191011-DSC_7759-Edit_HI_RES.jpeg")}
+.banner-bedroom{ 
+    background-image:  linear-gradient(rgba(0,0,0, 0.75),
+    rgba(0,0,0, 0.75)), url("https://www.thespruce.com/thmb/QXqE8XbnIwx5AUXih2G3FkVjnqg=/941x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/blue-bedroom-ideas-4145797-hero-5953ab1c14d54b7b9ce4ace659acc0c2.jpg");
+}
+.banner-dining{
+background-image:  linear-gradient(rgba(0,0,0, 0.75),
+rgba(0,0,0, 0.75)), url("https://i.ytimg.com/vi/5MybWq5b2is/maxresdefault.jpg");
+}
+.banner-backyard{
+    background-image:  linear-gradient(rgba(0,0,0, 0.75),
+    rgba(0,0,0, 0.75)), url("https://blog-media.casaone.com/uploads/2021/03/shutterstock_737120821.jpg");
+}
+
+.navbar{
+    width: 100%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 120px; 
+    margin-left: 10px;
+    cursor: pointer;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin:0 20px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+ li.active ::after {
+    content: '';
+    height: 3px;
+    width: 100%;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+.content p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+button{
+    width: 200PX;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color:#fff;
+    cursor: pointer;
+    position: relative;
+    overflow:hidden
+}
+span{
+    background: #009688;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left:0;
+    bottom: 0;
+    z-index:-1 ; 
+    transition: 0.5s;  
+}
+button:hover span{
+    width: 100%;
+}
+button:hover{
+    border: none ;
+}
